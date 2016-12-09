@@ -33,7 +33,7 @@ COLOR_TO_CODE () {
       VAL='\e[1;32m'
       ;;
 
-    YELLOW)
+    YELLOW|Yellow)
       VAL='\e[0;33m'
       ;;
 
