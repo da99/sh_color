@@ -52,6 +52,7 @@ COLOR_TO_CODE () {
 
 # === {{CMD}}           "my {{text}}"
 # === {{CMD}}  "-n -E"  "my {{text}}"
+# === echo {{my text}} | {{CMD}}
 COLORIZE () {
 
   if [[ "$#" -eq 2 ]]; then
@@ -60,6 +61,10 @@ COLORIZE () {
   else
     local +x TEXT="$@"
     local +x ECHO_ARGS="-e"
+  fi
+
+  if [[ -z "$TEXT" ]]; then
+    TEXT="$(cat)"
   fi
 
   local +x REPLACE=""
