@@ -1,9 +1,9 @@
-#!/usr/bin/env mksh
+#!/usr/bin/env zsh
 #
 #
 THE_ARGS="$@"
 THIS_DIR="$(dirname "$(dirname "$(realpath "$0")")")"
-PATH="$PATH:$THIS_DIR/../mksh_setup/bin"
+PATH="$PATH:$THIS_DIR/../my_zsh/bin"
 
 if [[ -z "$@" ]]; then
   action="watch"
@@ -16,7 +16,7 @@ set -u -e -o pipefail
 
 case $action in
   help|--help|-h)
-    mksh_setup print-help $0 "$@"
+    my_zsh print-help $0 "$@"
     ;;
 
   *)
