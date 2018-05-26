@@ -15,6 +15,7 @@ fi
 set -u -e -o pipefail
 
 case $action in
+  # === {{CMD}} help|--help|-h
   help|--help|-h)
     my_zsh print-help $0 "$@"
     ;;
